@@ -16,7 +16,7 @@ const Create = () => {
     const handleSubmit = (e) =>{
         e.preventDefault();
         
-        axios.post("http://localhost/API/save.php", inputs);
+        axios.post("http://localhost/API/index.php", inputs);
     }
 
 
@@ -35,7 +35,7 @@ const Create = () => {
                 <br/>
 
                 <label>Mobile:</label>
-                <input type="text" name='mobile' onChange={handleChange} />
+                <input type="text" name='phone' onChange={handleChange} />
                 <br/>
 
                 <button>Save</button>
