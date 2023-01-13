@@ -1,10 +1,12 @@
 import axios from 'axios';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import React from 'react';
 import './Create.css';
 
 const Create = () => {
-
+    
+    const navigate = useNavigate()
     const [inputs, setInputs] = useState({})
 
     const handleChange = (e) => {
@@ -16,7 +18,10 @@ const Create = () => {
     const handleSubmit = (e) =>{
         e.preventDefault();
         
-        axios.post("http://localhost/API/index.php", inputs);
+        axios.post("http://localhost/API/index.php", inputs).then(function(response){
+            console.log(response.data)
+            navigate('/')
+        });
     }
 
 
