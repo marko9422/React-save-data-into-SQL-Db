@@ -17,7 +17,6 @@ return (
   <BrowserRouter>
       <Link to='/'>List users</Link>
       <Link to='user/create'>Create users</Link>
-      <Link to='user/:id/edit'>Edit users</Link>
 
 
       <Routes>
